@@ -957,9 +957,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HexagonBehaviour
   translateSpeed: 0.01
   rotationSpeed: 0.005
-  scaleSpeed: 0.1
-  maxScaleLimit: 2.25
-  minScaleLimit: 0.7
+  maxScaleAmount: 0.065
+  minScaleAmount: 0.001
+  maxDesiredScale: 2.25
+  minDesiredScale: 0.7
 --- !u!1 &1366792751
 GameObject:
   m_ObjectHideFlags: 0

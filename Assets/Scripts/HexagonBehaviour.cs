@@ -6,21 +6,38 @@ public class HexagonBehaviour : MonoBehaviour
 {
     // Mieux, car elle conserve la protection des variables en meme temps d'etre visible dans l'inspecteur.
 
-    // ===== Variables de vitesse
-    [SerializeField] private float translateSpeed = 0.08f;
-    [SerializeField] private float rotationSpeed = 0.03f;
-    [SerializeField] private float scaleSpeed = 0.1f;
+    // ===== Variables de modification
+    private float translateSpeed;
+    [SerializeField] private float maxTranslateSpeed = 0.008f;
+    [SerializeField] private float minTranslateSpeed = 0.001f;
 
-    // ===== Variable de limite d'ecran
-    [SerializeField] private float maxScaleLimit = 2.25f;
-    [SerializeField] private float minScaleLimit = 0.7f;
+    private float rotationSpeed;
+    [SerializeField] private float maxRotationSpeed = 0.007f;
+    [SerializeField] private float minRotationSpeed = 0.005f;
+
+    private float scaleAmount;
+    [SerializeField] private float maxScaleAmount = 0.002f;
+    [SerializeField] private float minScaleAmount = 0.001f;
+
+    // ===== Variable de limite de taille
+    [SerializeField] private float maxDesiredScale = 2.25f;
+    [SerializeField] private float minDesiredScale = 0.7f;
+
+    // ===== Variables de restriction
+    private bool scalingUp = true;
 
     // ===== Variable de direction
     private int rotationDirection;
 
+    // ===== Variables de fenetre
+    private float distanceForTeleport = 10f;
+
     private void Start()
     {
+        translateSpeed = Random.Range(minTranslateSpeed, maxTranslateSpeed);
+        rotationSpeed = Random.Range(minRotationSpeed, maxRotationSpeed);
         rotationDirection = Random.Range(0, 2);
+        scaleAmount = Random.Range(minScaleAmount, maxScaleAmount);
     }
 
     private void Update()
@@ -52,18 +69,29 @@ public class HexagonBehaviour : MonoBehaviour
     // ===== Changement de scale =====
     private void Scale()
     {
-        if (transform.localScale.x <= maxScaleLimit)
+        Vector3 currentScale = transform.localScale;
+        if (scalingUp)
         {
-            float newXScale = transform.localScale.x + scaleSpeed;
-            float newYScale = transform.localScale.y + scaleSpeed;
+            float newXScale = transform.localScale.x + scaleAmount;
+            float newYScale = transform.localScale.y + scaleAmount;
             transform.localScale = new Vector2(newXScale, newYScale);
-        }
 
-        if (transform.localScale.x >= minScaleLimit)
+            // Le scale augmente egalement du x et du y, donc utilise le x comme conditions marche
+            if (currentScale.x >= maxDesiredScale)
+            {
+                scalingUp = false;
+            }
+        }
+        else if (!scalingUp)
         {
-            float newXScale = transform.localScale.x - scaleSpeed;
-            float newYScale = transform.localScale.y - scaleSpeed;
+            float newXScale = transform.localScale.x - scaleAmount;
+            float newYScale = transform.localScale.y - scaleAmount;
             transform.localScale = new Vector2(newXScale, newYScale);
+
+            if (currentScale.x <= minDesiredScale)
+            {
+                scalingUp = true;
+            }
         }
     }
 }
