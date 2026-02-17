@@ -401,12 +401,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac2c1afd1db0bce4d97b5c343da92e5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HexagonBehaviour
-  maxTranslateSpeed: 0.008
-  minTranslateSpeed: 0.001
+  maxTranslateSpeed: 0.045
+  minTranslateSpeed: 0.01
   maxRotationSpeed: 0.007
   minRotationSpeed: 0.005
-  maxScaleAmount: 0.003
-  minScaleAmount: 0.001
+  maxScaleAmount: 0.055
+  minScaleAmount: 0.01
   maxDesiredScale: 2.25
   minDesiredScale: 0.7
   distanceForWarp: -6
@@ -793,12 +793,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac2c1afd1db0bce4d97b5c343da92e5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HexagonBehaviour
-  maxTranslateSpeed: 0.008
-  minTranslateSpeed: 0.001
+  maxTranslateSpeed: 0.045
+  minTranslateSpeed: 0.01
   maxRotationSpeed: 0.007
   minRotationSpeed: 0.005
-  maxScaleAmount: 0.003
-  minScaleAmount: 0.001
+  maxScaleAmount: 0.055
+  minScaleAmount: 0.01
   maxDesiredScale: 2.25
   minDesiredScale: 0.7
   distanceForWarp: -6
@@ -921,12 +921,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac2c1afd1db0bce4d97b5c343da92e5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HexagonBehaviour
-  maxTranslateSpeed: 0.008
-  minTranslateSpeed: 0.001
+  maxTranslateSpeed: 0.045
+  minTranslateSpeed: 0.01
   maxRotationSpeed: 0.007
   minRotationSpeed: 0.005
-  maxScaleAmount: 0.003
-  minScaleAmount: 0.001
+  maxScaleAmount: 0.055
+  minScaleAmount: 0.01
   maxDesiredScale: 2.25
   minDesiredScale: 0.7
   distanceForWarp: -6
@@ -1344,12 +1344,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac2c1afd1db0bce4d97b5c343da92e5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HexagonBehaviour
-  maxTranslateSpeed: 0.008
-  minTranslateSpeed: 0.001
+  maxTranslateSpeed: 0.045
+  minTranslateSpeed: 0.01
   maxRotationSpeed: 0.007
   minRotationSpeed: 0.005
-  maxScaleAmount: 0.003
-  minScaleAmount: 0.001
+  maxScaleAmount: 0.055
+  minScaleAmount: 0.01
   maxDesiredScale: 2.25
   minDesiredScale: 0.7
   distanceForWarp: -6
@@ -1635,12 +1635,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac2c1afd1db0bce4d97b5c343da92e5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HexagonBehaviour
-  maxTranslateSpeed: 0.008
-  minTranslateSpeed: 0.001
+  maxTranslateSpeed: 0.045
+  minTranslateSpeed: 0.01
   maxRotationSpeed: 0.007
   minRotationSpeed: 0.005
-  maxScaleAmount: 0.003
-  minScaleAmount: 0.001
+  maxScaleAmount: 0.055
+  minScaleAmount: 0.01
   maxDesiredScale: 2.25
   minDesiredScale: 0.7
   distanceForWarp: -6

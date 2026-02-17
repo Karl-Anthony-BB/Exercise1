@@ -52,7 +52,8 @@ public class HexagonBehaviour : MonoBehaviour
         scaleAmount = Random.Range(minScaleAmount, maxScaleAmount);
     }
 
-    private void Update()
+    // Mieux pour la consistence de vitesse
+    private void FixedUpdate()
     {
         Translate();
         Rotate();
