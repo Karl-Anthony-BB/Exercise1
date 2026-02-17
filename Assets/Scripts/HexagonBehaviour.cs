@@ -35,9 +35,17 @@ public class HexagonBehaviour : MonoBehaviour
     [SerializeField] private float distanceForWarp = -10f;
     [SerializeField] private float warpYPos = 10f;
 
+    // ===== Variables position de spawn
+    [Header("Spawn Location")]
+    [SerializeField] private float spawnXPos;
+    private float spawnYPos;
+
+
 
     private void Start()
     {
+        Spawn();
+
         translateSpeed = Random.Range(minTranslateSpeed, maxTranslateSpeed);
         rotationSpeed = Random.Range(minRotationSpeed, maxRotationSpeed);
         rotationDirection = Random.Range(0, 2);
@@ -50,6 +58,15 @@ public class HexagonBehaviour : MonoBehaviour
         Rotate();
         Scale();
         Warp();
+    }
+
+    // ===== Position de spawn =====
+    private void Spawn()
+    {
+        // Rend le y de spawn egal a celle du warp
+        spawnYPos = warpYPos;
+
+        transform.position = new Vector2(spawnXPos, spawnYPos);
     }
 
     // ===== Mouvement haut en bas =====
