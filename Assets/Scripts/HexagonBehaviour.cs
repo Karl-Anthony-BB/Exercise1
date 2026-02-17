@@ -7,19 +7,20 @@ public class HexagonBehaviour : MonoBehaviour
     // Mieux, car elle conserve la protection des variables en meme temps d'etre visible dans l'inspecteur.
 
     // ===== Variables de modification
-    private float translateSpeed;
+    [Header("Movement Stats")]
     [SerializeField] private float maxTranslateSpeed = 0.008f;
     [SerializeField] private float minTranslateSpeed = 0.001f;
-
-    private float rotationSpeed;
     [SerializeField] private float maxRotationSpeed = 0.007f;
     [SerializeField] private float minRotationSpeed = 0.005f;
-
-    private float scaleAmount;
     [SerializeField] private float maxScaleAmount = 0.002f;
     [SerializeField] private float minScaleAmount = 0.001f;
 
+    private float scaleAmount;
+    private float translateSpeed;
+    private float rotationSpeed;
+
     // ===== Variable de limite de taille
+    [Header("Scale Stats")]
     [SerializeField] private float maxDesiredScale = 2.25f;
     [SerializeField] private float minDesiredScale = 0.7f;
 
@@ -29,8 +30,11 @@ public class HexagonBehaviour : MonoBehaviour
     // ===== Variable de direction
     private int rotationDirection;
 
-    // ===== Variables de fenetre
-    private float distanceForTeleport = 10f;
+    // ===== Variables de teleportation
+    [Header("Warp Stats")]
+    [SerializeField] private float distanceForWarp = -10f;
+    [SerializeField] private float warpYPos = 10f;
+
 
     private void Start()
     {
@@ -45,6 +49,7 @@ public class HexagonBehaviour : MonoBehaviour
         Translate();
         Rotate();
         Scale();
+        Warp();
     }
 
     // ===== Mouvement haut en bas =====
@@ -92,6 +97,15 @@ public class HexagonBehaviour : MonoBehaviour
             {
                 scalingUp = true;
             }
+        }
+    }
+
+    // ===== Teleportation de l'autre cote de la fenetre
+    private void Warp()
+    {
+        if (transform.position.y <= distanceForWarp)
+        {
+            transform.position = new Vector2(transform.position.x, warpYPos);
         }
     }
 }

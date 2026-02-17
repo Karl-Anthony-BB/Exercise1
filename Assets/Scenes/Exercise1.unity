@@ -955,12 +955,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac2c1afd1db0bce4d97b5c343da92e5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HexagonBehaviour
-  translateSpeed: 0.01
-  rotationSpeed: 0.005
-  maxScaleAmount: 0.065
+  maxTranslateSpeed: 0.008
+  minTranslateSpeed: 0.001
+  maxRotationSpeed: 0.007
+  minRotationSpeed: 0.005
+  maxScaleAmount: 0.003
   minScaleAmount: 0.001
   maxDesiredScale: 2.25
   minDesiredScale: 0.7
+  distanceForWarp: -7
+  warpYPos: 7
 --- !u!1 &1366792751
 GameObject:
   m_ObjectHideFlags: 0
