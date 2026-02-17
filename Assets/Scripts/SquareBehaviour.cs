@@ -2,7 +2,10 @@ using UnityEngine;
 
 public class SquareBehaviour : MonoBehaviour
 {
+    // ===== Vitesse
     [SerializeField] private float rotationSpeed = 2f;
+
+    // ===== Direction
     private int rotationDirection;
 
     private void Start()
@@ -12,6 +15,7 @@ public class SquareBehaviour : MonoBehaviour
 
     private void Update()
     {
+        // ===== Rotation =====
         if (rotationDirection == 0)
         {
             transform.Rotate(0f, 0f, rotationSpeed);

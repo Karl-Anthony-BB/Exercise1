@@ -4,11 +4,18 @@ using static UnityEngine.GridBrushBase;
 
 public class HexagonBehaviour : MonoBehaviour
 {
+    // Mieux, car elle conserve la protection des variables en meme temps d'etre visible dans l'inspecteur.
+
+    // ===== Variables de vitesse
     [SerializeField] private float translateSpeed = 0.08f;
     [SerializeField] private float rotationSpeed = 0.03f;
-    [SerializeField] private float scaleModifier = 0.1f;
+    [SerializeField] private float scaleSpeed = 0.1f;
+
+    // ===== Variable de limite d'ecran
     [SerializeField] private float maxScaleLimit = 2.25f;
     [SerializeField] private float minScaleLimit = 0.7f;
+
+    // ===== Variable de direction
     private int rotationDirection;
 
     private void Start()
@@ -23,11 +30,13 @@ public class HexagonBehaviour : MonoBehaviour
         Scale();
     }
 
+    // ===== Mouvement haut en bas =====
     private void Translate()
     {
         transform.Translate(0f, -translateSpeed, 0f, Space.World);
     }
 
+    // ===== Rotation =====
     private void Rotate()
     {
         if (rotationDirection == 0)
@@ -40,18 +49,20 @@ public class HexagonBehaviour : MonoBehaviour
         }
     }
 
+    // ===== Changement de scale =====
     private void Scale()
     {
         if (transform.localScale.x <= maxScaleLimit)
         {
-            float newXScale = transform.localScale.x + scaleModifier;
-            float newYScale = transform.localScale.y + scaleModifier;
+            float newXScale = transform.localScale.x + scaleSpeed;
+            float newYScale = transform.localScale.y + scaleSpeed;
             transform.localScale = new Vector2(newXScale, newYScale);
         }
-        else if (transform.localScale.x >= minScaleLimit)
+
+        if (transform.localScale.x >= minScaleLimit)
         {
-            float newXScale = transform.localScale.x - scaleModifier;
-            float newYScale = transform.localScale.y - scaleModifier;
+            float newXScale = transform.localScale.x - scaleSpeed;
+            float newYScale = transform.localScale.y - scaleSpeed;
             transform.localScale = new Vector2(newXScale, newYScale);
         }
     }
