@@ -366,6 +366,7 @@ GameObject:
   - component: {fileID: 470758146}
   - component: {fileID: 470758148}
   - component: {fileID: 470758147}
+  - component: {fileID: 470758149}
   m_Layer: 0
   m_Name: Hexagon
   m_TagString: Untagged
@@ -470,6 +471,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &470758149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 470758145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fca9e5bd9a27cda40a8be421e4df0fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DetectionProximiteJoueur
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,6 +758,7 @@ GameObject:
   - component: {fileID: 764664640}
   - component: {fileID: 764664642}
   - component: {fileID: 764664641}
+  - component: {fileID: 764664643}
   m_Layer: 0
   m_Name: Hexagon
   m_TagString: Untagged
@@ -849,6 +863,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &764664643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764664639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fca9e5bd9a27cda40a8be421e4df0fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DetectionProximiteJoueur
 --- !u!1 &821467327
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,6 +886,7 @@ GameObject:
   - component: {fileID: 821467328}
   - component: {fileID: 821467330}
   - component: {fileID: 821467329}
+  - component: {fileID: 821467331}
   m_Layer: 0
   m_Name: Hexagon
   m_TagString: Untagged
@@ -964,6 +991,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &821467331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821467327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fca9e5bd9a27cda40a8be421e4df0fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DetectionProximiteJoueur
 --- !u!1 &914845560
 GameObject:
   m_ObjectHideFlags: 0
@@ -974,8 +1013,8 @@ GameObject:
   m_Component:
   - component: {fileID: 914845562}
   - component: {fileID: 914845561}
-  - component: {fileID: 914845563}
   - component: {fileID: 914845564}
+  - component: {fileID: 914845565}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -1057,18 +1096,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 656389150}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &914845563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 914845560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fca9e5bd9a27cda40a8be421e4df0fac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DetectionProximiteJoueur
 --- !u!114 &914845564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1082,6 +1109,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SquareRotate
   rotationSpeed: 0.0035
+--- !u!114 &914845565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914845560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fca9e5bd9a27cda40a8be421e4df0fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DetectionProximiteJoueur
 --- !u!1 &985475219
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,6 +1250,7 @@ GameObject:
   - component: {fileID: 1193947781}
   - component: {fileID: 1193947780}
   - component: {fileID: 1193947782}
+  - component: {fileID: 1193947783}
   m_Layer: 0
   m_Name: Hexagon
   m_TagString: Untagged
@@ -1315,6 +1355,18 @@ MonoBehaviour:
   distanceForWarp: -6
   warpYPos: 6
   spawnXPos: -6
+--- !u!114 &1193947783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193947779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fca9e5bd9a27cda40a8be421e4df0fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DetectionProximiteJoueur
 --- !u!1 &1366792751
 GameObject:
   m_ObjectHideFlags: 0
@@ -1548,6 +1600,7 @@ GameObject:
   - component: {fileID: 1426799858}
   - component: {fileID: 1426799860}
   - component: {fileID: 1426799859}
+  - component: {fileID: 1426799861}
   m_Layer: 0
   m_Name: Hexagon
   m_TagString: Untagged
@@ -1652,6 +1705,18 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &1426799861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426799857}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fca9e5bd9a27cda40a8be421e4df0fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DetectionProximiteJoueur
 --- !u!1 &1489016618
 GameObject:
   m_ObjectHideFlags: 0
